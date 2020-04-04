@@ -1,0 +1,23 @@
+.section-what-do {
+    padding-top: 100px;
+    padding-bottom: 119px;
+    background-color: $section-bg-color;
+
+    &__list {
+        @include flex(space-around, center);
+    }
+
+    &__icon-wrapper {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &__icon {
+        width: 59px;
+        height: 59px;
+    }
+
+    &__title {
+        @include text($H600, 400, $grey-light);
+    }
+}

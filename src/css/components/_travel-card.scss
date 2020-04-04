@@ -1,0 +1,25 @@
+.travel-card {
+    max-width: 540px;
+    opacity: 0.9;
+    background-color: $darker;
+    padding: 50px 30px 70px;
+    font-family: $secondary-font;  
+
+    &__country {
+        @include text($H300, 400, $grey-light);    
+        letter-spacing: 0.075em;
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        @include text($H300, 400, $white);    
+        text-transform: uppercase;
+        margin-bottom: 27px;
+    }
+
+    &__description {
+        @include text($H200, 400, $grey-light);  
+        line-height: 26px;
+        margin-bottom: 70px;
+    }
+}

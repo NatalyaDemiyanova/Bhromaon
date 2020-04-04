@@ -1,0 +1,6 @@
+.logo {
+  @include text($H500, 700, $white);
+  font-family: $secondary-font;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}

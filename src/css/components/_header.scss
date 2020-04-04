@@ -1,0 +1,98 @@
+.header {
+    padding: 125px 0 0px;
+    position: relative;
+    background-image: url(../images/header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+
+    @include media($screen-tablet){
+        padding: 265px 0 135px;
+        height: 100vh;
+    }
+
+    &__container {
+        @include flex(flex-start, center, column);
+    }
+
+    &__title {
+        @include text($H600, 700, $white);
+        font-family: $secondary-font;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 7px;
+
+        @include media($screen-tablet){
+            @include text($H700, 700, $white);
+        }
+    }
+
+    &__subtitle {
+        font-family: $secondary-font;
+        @include text($H300, 400, $white);
+        letter-spacing: 0.31em;
+        margin-bottom: 50px;
+        text-align: center;
+
+        @include media($screen-tablet){
+            @include text($H400, 400, $white);
+        }
+    }
+
+    &__form {
+        @include flex(flex-start, center, column);
+        margin-bottom: 70px;
+
+        @include media($screen-tablet){
+            @include flex;
+            margin-bottom: 120px;
+        }
+    }
+
+    &__input {
+        height: 60px;
+        width: 350px;
+        margin-bottom: 20px;
+        &::placeholder {
+            font-family: $secondary-font;
+            @include text($H100, 400, $placeholder-color);
+            letter-spacing: 0.2em;
+            text-align: center;
+        }
+
+        @include media($screen-tablet){
+            width: 500px;
+            margin-bottom: 0px;
+        }
+    }
+
+    &__search {
+        background-color: $btn-color;
+        @include text($H100, 400, $white);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        height: 60px;
+        width: 150px;
+        cursor: pointer;
+        border: 2px solid $white;
+        outline: none;
+        float: right;  
+    }
+
+    &__scroll {
+        @include flex(flex-start, center, column); 
+        margin-bottom: 20px;
+
+        @include media($screen-tablet){
+            margin-bottom: 0;
+        }
+        
+    }
+
+    &__scroll-text {
+        font-family: $secondary-font;
+        @include text($H100, 400, $white);
+        letter-spacing: 0.2em;
+        margin-bottom: 15px;
+    }
+}

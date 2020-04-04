@@ -1,3 +1,18 @@
-p {
-  color: red;
-}
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aleo&display=swap');
+
+// Core
+@import "./core/vars"; //переменные (записываем первым)
+@import "./core/mixins"; // миксины
+@import "./core/common"; //общие стили (всегда запис. последним)
+
+// блоки
+@import "./components/header";
+@import "./components/navigation";
+@import "./components/logo";
+@import "./components/section-choose";
+@import "./components/button";
+@import "./components/section-what-do";
+@import "./components/section-travel";
+@import "./components/travel-card";
+@import "./components/_section-travel-next";

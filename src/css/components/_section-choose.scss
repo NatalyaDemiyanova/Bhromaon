@@ -1,0 +1,71 @@
+.section-choose {
+    background-image: url(../images/section-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    &__container {
+        @include flex(flex-start, center, column);
+
+        @include media($screen-tablet){
+            @include flex;
+        }
+    }
+
+    &__content-box {
+        padding-top: 200px;
+        width: 50%;
+    }
+
+    &__title {
+        @include text($H600, 400, $white);
+        margin-bottom: 60px;
+        text-align: left;
+    }
+
+    &__description{
+        margin-bottom: 68px;
+    }
+
+    &__text {
+        @include text($H200, 400, $grey-light);
+        font-family: $secondary-font;
+        line-height: 26px;
+        letter-spacing: 0.1em;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+          }
+    }
+
+    &__image-box {
+        padding-top: 120px;
+        padding-left: 95px;
+        width: 50%;
+        margin-bottom: 120px;
+    }
+
+    &__image-wrapper {
+        width: 350px;
+        height: 220px;
+        &:nth-child(1) {
+            margin-bottom: 5px;
+        }
+        &:nth-child(2) {
+            float: right;
+        }
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+// .button {
+// }
+// .section-choose__button {
+// }
+// .section-choose__image-box {
+// }
+// .section-choose {
+// }
