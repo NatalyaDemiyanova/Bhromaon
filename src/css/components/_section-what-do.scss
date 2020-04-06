@@ -3,6 +3,17 @@
     padding-bottom: 119px;
     background-color: $section-bg-color;
 
+    // &__line-wrapper {
+    //     @include flex(space-around, stretch);
+    // }
+
+    // &__line {
+    //     max-width: 390px;
+    //     max-height: 390px;
+    //     border-radius: 50%;
+    //     border-radius: 2 dotted $white;
+    // }
+
     &__list {
         @include flex(space-around, center);
     }

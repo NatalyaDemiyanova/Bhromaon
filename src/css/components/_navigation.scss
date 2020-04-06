@@ -1,13 +1,13 @@
 .navigation {
     padding: 30px 0;
     background-color: $navigation-bg-color;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
     @include media($screen-tablet){
         height: 80px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
     }
 
     &__container {
