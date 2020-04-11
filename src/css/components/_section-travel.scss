@@ -5,4 +5,12 @@
     background-size: cover;
     padding-top: 229px;
     padding-bottom: 100px;
+
+    &__travel-card {
+        margin: 0 auto;
+
+        @include media($screen-desktop) {
+            margin-left: 0;
+        }
+    }
 }

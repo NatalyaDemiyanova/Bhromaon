@@ -1,0 +1,35 @@
+.footer {
+    background-color: $footer-bg-color;
+    padding: 120px 0px 53px;
+
+    &__container {
+        @include flex(flex-start, center, column);
+    }
+
+    &__logo {
+        margin-bottom: 15px;
+    }
+
+    &__subtitle {
+        font-family: $secondary-font;
+        @include text($H200, 400, $white);
+        letter-spacing: 0.1em;
+        margin-bottom: 30px;
+    }
+
+    &__list {
+        @include flex(center, center);
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 23px;
+    }
+
+    &__icon {
+       fill: white;
+       transition: all 0.2s ease;
+       &:hover {
+           fill: $blue;
+       }
+    }
+}

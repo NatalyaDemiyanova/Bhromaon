@@ -14,12 +14,18 @@
     &__content-box {
         text-align: center;
         padding-top: 80px;
-        width: 75%;
+        width: 100%;
 
         @include media($screen-tablet){
-            padding-top: 200px;
+            padding-top: 140px;
+            padding-right: 25px;
             width: 50%;
             text-align: left;
+        }
+
+        @include media($screen-desktop) {
+            padding-top: 200px;
+            padding-right: 0px;
         }
     }
 
@@ -58,9 +64,11 @@
 
         @include media($screen-tablet){
             padding-top: 120px;
-            padding-left: 95px;
             width: 50%;
             margin-bottom: 120px;
+        }
+        @include media($screen-desktop) {
+            padding-left: 95px;
         }
         
     }
@@ -69,23 +77,25 @@
         width: 350px;
         height: 220px;
         margin: 0 auto;
-        &:nth-child(1) {
-            margin-bottom: 50px;
-        }
-        &:nth-child(2) {
-            margin-bottom: 50px;
-        }
-        
+        margin-bottom: 50px;
+                
         @include media($screen-tablet){
-            width: 350px;
+            // width: 350px;
             height: 220px;
+            &:not(:last-of-type){
+                margin-bottom: 50px;
+            }
+        }
+            
+        @include media($screen-desktop) {
             &:nth-child(1) {
                 margin-bottom: 5px;
+                float: left;
             }
             &:nth-child(2) {
                 float: right;
                 margin-bottom: 0px;
-            }
+            } 
         }
     }
     &__image {

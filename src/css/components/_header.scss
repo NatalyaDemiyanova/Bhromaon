@@ -30,27 +30,34 @@
         font-family: $secondary-font;
         @include text($H300, 400, $white);
         letter-spacing: 0.31em;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         text-align: center;
 
         @include media($screen-tablet){
             @include text($H400, 400, $white);
+            margin-bottom: 50px;
         }
     }
 
     &__form {
+        width: 100%;
+        background-color: none;
         @include flex(flex-start, center, column);
         margin-bottom: 70px;
 
         @include media($screen-tablet){
+            width: fit-content;
             @include flex;
+            background-color: $white;
             margin-bottom: 120px;
         }
     }
 
     &__input {
         height: 60px;
-        width: 350px;
+        max-width: 500px;
+        width: 100%;
+        border: none;
         margin-bottom: 20px;
         &::placeholder {
             font-family: $secondary-font;
@@ -66,16 +73,27 @@
     }
 
     &__search {
+        margin: 2px;
+        @include flex(center, center);
         background-color: $btn-color;
         @include text($H100, 400, $white);
         text-transform: uppercase;
         letter-spacing: 0.1em;
-        height: 60px;
+        height: 58px;
         width: 150px;
         cursor: pointer;
-        border: 2px solid $white;
+        border: none;
         outline: none;
         float: right;  
+    }
+
+    &__search-text {
+        margin-right: 15px;
+    }
+
+    &__search-icon {
+        width: 20px;
+        height: 20px;
     }
 
     &__scroll {
@@ -84,8 +102,7 @@
 
         @include media($screen-tablet){
             margin-bottom: 0;
-        }
-        
+        } 
     }
 
     &__scroll-text {
