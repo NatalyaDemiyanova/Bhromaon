@@ -1,6 +1,10 @@
 .footer {
     background-color: $footer-bg-color;
-    padding: 120px 0px 53px;
+    padding: 53px 0px;
+
+    @include media($screen-tablet){
+        padding: 120px 0px 53px;
+    }
 
     &__container {
         @include flex(flex-start, center, column);

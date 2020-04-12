@@ -5,18 +5,10 @@
     bottom: 0;
     left: 0;
     right: 0;
-
-    @include media($screen-tablet){
-        height: 80px;
-    }
+    height: 80px;
 
     &__container {
-        @include flex (space-between, center, column);
-
-        @include media($screen-tablet){
-            @include flex (space-between, center);
-            height: 100%;
-        }
+        @include flex (space-between, center);
     }
 
     &__logo{
@@ -24,28 +16,19 @@
         @include media($screen-tablet){
             margin-bottom: 0px;
         }
-
     }
 
     &__list {
-        @include flex (center, stretch, column);
-        text-align: center;
-
-        @include media($screen-tablet){
-            @include flex;
-        }
-    }
-    &__item {
-        margin-right: 0px;
-        &:not(:last-child) {
-            margin-bottom: 20px;
-          }
+        display: none; 
         
         @include media($screen-tablet){
-            &:not(:last-child) {
+            @include flex ;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
             margin-right: 40px;
-            margin-bottom: 0px;
-            }
         }
     }
     &__link {

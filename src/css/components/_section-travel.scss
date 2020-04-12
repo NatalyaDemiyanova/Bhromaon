@@ -3,8 +3,12 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    padding-top: 229px;
+    padding-top: 100px;
     padding-bottom: 100px;
+
+    @include media($screen-desktop) {
+        padding-top: 229px;
+    }
 
     &__travel-card {
         margin: 0 auto;

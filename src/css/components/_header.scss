@@ -1,25 +1,32 @@
 .header {
-    padding: 125px 0 0px;
+    padding: 0px;
     position: relative;
     background-image: url(../images/header.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    @include flex(center, center, column);
 
-    @include media($screen-tablet){
+    @include media($screen-desktop){
         padding: 265px 0 135px;
+        @include flex(flex-start, center, column);
     }
 
     &__container {
-        @include flex(flex-start, center, column);
+        width: 100%;
+
+        @include media($screen-tablet){
+            width: fit-content;
+        }
     }
 
     &__title {
         @include text($H600, 700, $white);
         font-family: $secondary-font;
+        text-align: center;
         text-transform: uppercase;
         letter-spacing: 0.1em;
-        margin-bottom: 7px;
+        margin-bottom: 8px;
 
         @include media($screen-tablet){
             @include text($H700, 700, $white);
@@ -30,26 +37,22 @@
         font-family: $secondary-font;
         @include text($H300, 400, $white);
         letter-spacing: 0.31em;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         text-align: center;
 
         @include media($screen-tablet){
             @include text($H400, 400, $white);
-            margin-bottom: 50px;
         }
     }
 
     &__form {
-        width: 100%;
         background-color: none;
         @include flex(flex-start, center, column);
-        margin-bottom: 70px;
+        margin-bottom: 120px;
 
         @include media($screen-tablet){
-            width: fit-content;
             @include flex;
             background-color: $white;
-            margin-bottom: 120px;
         }
     }
 
@@ -58,6 +61,7 @@
         max-width: 500px;
         width: 100%;
         border: none;
+        padding: 0px 15px;
         margin-bottom: 20px;
         &::placeholder {
             font-family: $secondary-font;
