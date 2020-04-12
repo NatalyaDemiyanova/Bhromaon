@@ -3,16 +3,19 @@
     padding-bottom: 119px;
     background-color: $section-bg-color;
 
-    // &__line-wrapper {
-    //     @include flex(space-around, stretch);
-    // }
+    @include media($screen-tablet){
+        padding-top: 25px;
+    }
 
-    // &__line {
-    //     max-width: 390px;
-    //     max-height: 390px;
-    //     border-radius: 50%;
-    //     border-radius: 2 dotted $white;
-    // }
+    &__line-wrapper {
+       display: none;
+
+        @include media($screen-tablet){
+            @include flex(center, center);
+            @include padding-hack(8.4%);
+            transform: translate(-7px, 40px);
+        }
+    }
 
     &__list {
         @include flex(flex-start, center, column);
@@ -23,6 +26,8 @@
     }
 
     &__item {
+        background-color: $dark;
+        z-index: 5;
         &:not(:last-of-type) {
             margin-bottom: 70px;
         }
