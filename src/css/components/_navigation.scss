@@ -1,40 +1,77 @@
 .navigation {
-    padding: 30px 0;
+    padding: 15px 24px 15px 0;
     background-color: $navigation-bg-color;
-    position: absolute;
-    bottom: 0;
+    position: fixed;
+    top: 0;
     left: 0;
     right: 0;
-    height: 80px;
+    height: 50px;
+    z-index: 10;
+
+    @include media($screen-tablet){
+        position: absolute;
+        padding: 30px 0;
+        height: 80px;
+        bottom: 0;
+        top: auto;
+    }
 
     &__container {
         @include flex (space-between, center);
-    }
+        padding: 0;
 
-    &__logo{
-        margin-bottom: 30px;
         @include media($screen-tablet){
-            margin-bottom: 0px;
+            padding: 0 24px;
         }
     }
 
     &__list {
-        display: none; 
-        
+        width: 100%;
+        position: absolute; 
+        top: -460px;
+        background-color: $navigation-bg-color;
+        padding: 50px 40px;
+        transition: all 0.3s ease 0s;
+
+        &--active {
+            top: 49px;            
+        }
+
         @include media($screen-tablet){
             @include flex ;
+            position: static;
+            width: auto;
+            padding: 0;
         }
     }
 
     &__item {
-        &:not(:last-child) {
-            margin-right: 40px;
+        text-align: center;
+        &:not(:last-of-type) {
+            margin-bottom: 45px;
+        }
+
+        @include media($screen-tablet){
+            &:not(:last-of-type) {
+                margin-bottom: 0px;
+            }
+            &:not(:last-child) {
+                margin-right: 40px;
+            }
         }
     }
+
     &__link {
-        @include text($H100, 400, $white);
+        @include text($H300, 400, $white);
         text-transform: uppercase;
+
+        @include media($screen-tablet){
+            @include text($H100, 400, $white); 
+        }
     }
 
+    &__burger {
+        margin-bottom: 5px;
+    }
 }
 

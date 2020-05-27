@@ -6,7 +6,10 @@
     padding: 24px 38px 23px; 
     cursor: pointer;
     transition: all 0.2s ease;
-    &:hover {
-        box-shadow: 0 2px 5px rgb(3, 131, 235);
+
+    @include media($screen-desktop){
+        &:hover {
+            box-shadow: 0 2px 5px rgb(3, 131, 235);
+        }
     }
 }

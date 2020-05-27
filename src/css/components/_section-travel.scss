@@ -1,14 +1,17 @@
 .section-travel {
-    background-image: url(../images/section-2.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    &__row {
+        background-image: url(../images/section-2.png);
+        @include background-image;
+        padding-top: 100px;
+        padding-bottom: 100px;
 
-    @include media($screen-desktop) {
-        padding-top: 229px;
-    }
+        @include media($screen-desktop) {
+            padding-top: 229px;
+        }
+        &--second {
+            background-image: url(../images/section-3.png);
+        }
+    }              
 
     &__travel-card {
         margin: 0 auto;
@@ -16,5 +19,15 @@
         @include media($screen-desktop) {
             margin-left: 0;
         }
+
+        &--row-2 {
+            @include media($screen-desktop) {
+                margin-right: 0;
+                margin-left: auto;
+            }
+        }
     }
+
+
+
 }

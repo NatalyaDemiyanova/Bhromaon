@@ -42,3 +42,12 @@
   }
 }
 
+@mixin background-image (
+  $background-repeat: no-repeat,
+  $background-position: center center,
+  $background-size: cover
+){
+  background-repeat: $background-repeat;
+  background-position: $background-position;
+  background-size: $background-size;
+}

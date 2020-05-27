@@ -1,8 +1,7 @@
 .section-choose {
     background-image: url(../images/section-1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    @include background-image;
+    
     &__container {
         @include flex(flex-start, center, column);
 

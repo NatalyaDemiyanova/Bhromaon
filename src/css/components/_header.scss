@@ -14,9 +14,11 @@
 
     &__container {
         width: 100%;
+        padding-top: 100px;
 
         @include media($screen-tablet){
             width: fit-content;
+            padding-top: 0px;
         }
     }
 
@@ -42,6 +44,7 @@
 
         @include media($screen-tablet){
             @include text($H400, 400, $white);
+            margin-bottom: 50px;
         }
     }
 
@@ -120,8 +123,34 @@
 
     &__scroll-text {
         font-family: $secondary-font;
-        @include text($H100, 400, $white);
+        @include text($H200, 700, $white);
         letter-spacing: 0.2em;
         margin-bottom: 15px;
+
+        @include media($screen-tablet){
+             @include text($H100, 400, $white);
+        } 
+    }
+
+    &__backdrop {
+        background-color: $navigation-bg-color;
+        position: absolute;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+    
+        &--active {
+            display: block;
+        }
+    
+        @include media($screen-tablet){
+            display: none;
+       } 
     }
 }
+
+
